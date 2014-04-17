@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>periodic.js</title>
+	<meta name='description' content=''>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<script src='periodic.js'></script>
+
+</head>
+<body>
+
+	<p class='periodicjs-time'></p>
+
+	<script>
+
+		window.electionData = function(data) {
+			periodic.run();
+		};
+
+		periodic.setup({
+			duration: 3000,
+			update: function() {
+				$.getJSON('http://amzncache.boston.com/election/2013/data.jsonp?callback=?')
+			}
+		});
+
+		periodic.run();
+
+	</script>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+
+</body>
+</html>
