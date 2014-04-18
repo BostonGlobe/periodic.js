@@ -74,6 +74,6 @@
 	return {
 		setup: setup,
 		run: draw
-	}
+	};
 
 })();
