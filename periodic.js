@@ -1,4 +1,4 @@
-var periodic = (function() {
+ var periodic = (function() {
 
 	var options = {};
 
@@ -6,6 +6,7 @@ var periodic = (function() {
 	var _startTime;
 	var _timeUntilUpdate = 0;
 	var _rAF;
+	var _hasRunAtLeastOnce = false;
 
 	function display(time) {
 
@@ -37,7 +38,7 @@ var periodic = (function() {
 		_elapsed = now - _startTime;
 
 		// how much time is left until we update?
-		_timeUntilUpdate = options.duration - _elapsed;
+		_timeUntilUpdate = (_hasRunAtLeastOnce ? options.duration : 0) - _elapsed;
 
 		if (_timeUntilUpdate <= 0) {
 
@@ -49,6 +50,9 @@ var periodic = (function() {
 
 			// run the update - whatever it is
 			options.update();
+
+			// we've now run this at least once
+			_hasRunAtLeastOnce = true;
 
 		} else {
 
