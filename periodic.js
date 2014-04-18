@@ -24,6 +24,12 @@
 
 	}
 
+	function stop() {
+		cancelAnimationFrame(_rAF);
+		var node = document.querySelector('.periodicjs-time');
+		node.parentNode.removeChild(node);
+	}
+
 	function draw() {
 
 		_rAF = requestAnimationFrame(draw);
@@ -73,7 +79,8 @@
 
 	return {
 		setup: setup,
-		run: draw
+		run: draw,
+		stop: stop
 	};
 
 })();
