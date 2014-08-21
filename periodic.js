@@ -1,4 +1,4 @@
- var periodic = (function() {
+function PeriodicJS() {
 
 	var options = {};
 
@@ -54,11 +54,11 @@
 			// reset startTime
 			_startTime = null;
 
-			// run the update - whatever it is
-			options.update();
-
 			// we've now run this at least once
 			_hasRunAtLeastOnce = true;
+
+			// run the update - whatever it is
+			options.update();
 
 		} else {
 
@@ -82,5 +82,5 @@
 		run: draw,
 		stop: stop
 	};
-
-})();
+	
+}
