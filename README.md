@@ -7,12 +7,25 @@
 ## Usage
 
 ``` javascript
+var periodic = PeriodicJS();
+
 periodic.setup({
 	duration: 1000, // in milliseconds - defaults to 1 minute
 	update: function() {
-	  // this function will run every <duration> milliseconds
+		// this function will run every <duration> milliseconds
+		doSomething();
 	}
 });
+
+function doSomething() {
+	// do something here
+	
+	// resume periodic
+	periodic.run();
+}
+
+// finally, start the whole thing
+periodic.run();
 ```
 
 Also add an element with `periodicjs-time` class:
@@ -20,8 +33,6 @@ Also add an element with `periodicjs-time` class:
 ``` html
 <p class='periodicjs-time'></p>
 ```
-
-Call `periodic.run()` once at start, and then when your `update` function is complete.
 
 See `index.html` for a full example.
 
