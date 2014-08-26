@@ -4,6 +4,10 @@
 
 - `bower install periodic.js`
 
+## Dependencies
+
+- [requestAnimationFrame](http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/) - you'll need this to support legacy browsers.
+
 ## Usage
 
 ``` javascript
