@@ -38,6 +38,13 @@ Also add an element with `periodicjs-time` class:
 <p class='periodicjs-time'></p>
 ```
 
+Call `stop()` when you want to stop:
+
+``` javascript
+periodic.stop();
+
+```
+
 See `index.html` for a full example.
 
 
