@@ -42,7 +42,6 @@ Call `stop()` when you want to stop:
 
 ``` javascript
 periodic.stop();
-
 ```
 
 See `index.html` for a full example.
