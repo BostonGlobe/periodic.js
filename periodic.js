@@ -73,7 +73,7 @@ function PeriodicJS() {
 
 		// default to 1 minute
 		options.duration = opts.duration || 60*1000;
-		options.displaySelector = opts.displaySelector || '.periodicjs-time';
+		options.displaySelector = opts.displaySelector || '.periodicjs';
 		options.update = opts.update;
 
 	}

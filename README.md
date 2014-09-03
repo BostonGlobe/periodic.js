@@ -14,7 +14,8 @@
 var periodic = PeriodicJS();
 
 periodic.setup({
-	duration: 1000, // in milliseconds - defaults to 1 minute
+	duration: 1000, // in milliseconds - defaults to 1 minute,
+	displaySelector: '.updater' // defaults to .periodicjs
 	update: function() {
 		// this function will run every <duration> milliseconds
 		doSomething();
@@ -32,10 +33,10 @@ function doSomething() {
 periodic.run();
 ```
 
-Also add an element with `periodicjs-time` class:
+Also add an element with the `displaySelector` class you provided earlier:
 
 ``` html
-<p class='periodicjs-time'></p>
+<p class='updater'></p>
 ```
 
 Call `stop()` when you want to stop:
