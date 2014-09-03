@@ -11,7 +11,7 @@ function PeriodicJS() {
 	function display(time) {
 
 		// find the current displayed time
-		var element = document.querySelector('.periodicjs-time');
+		var element = document.querySelector(options.displaySelector);
 		var currentDisplayedTime = element.innerHTML;
 
 		// format incoming time
@@ -26,7 +26,7 @@ function PeriodicJS() {
 
 	function stop() {
 		cancelAnimationFrame(_rAF);
-		var node = document.querySelector('.periodicjs-time');
+		var node = document.querySelector(options.displaySelector);
 		node.parentNode.removeChild(node);
 	}
 
@@ -73,6 +73,7 @@ function PeriodicJS() {
 
 		// default to 1 minute
 		options.duration = opts.duration || 60*1000;
+		options.displaySelector = opts.displaySelector || '.periodicjs-time';
 		options.update = opts.update;
 
 	}
