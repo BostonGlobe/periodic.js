@@ -14,7 +14,7 @@
 var periodic = PeriodicJS();
 
 periodic.setup({
-	duration: 1000, // in milliseconds - defaults to 1 minute,
+	duration: 5000, // in milliseconds - defaults to 1 minute,
 	displaySelector: '.updater' // defaults to .periodicjs
 	update: function() {
 		// this function will run every <duration> milliseconds
