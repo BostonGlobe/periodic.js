@@ -1,4 +1,6 @@
 {
   "name": "periodic.js",
-  "version": "0.0.6"
+  "version": "0.0.6",
+  "main": "periodic.js",
+  "keywords": "timer, scheduler"
 }
