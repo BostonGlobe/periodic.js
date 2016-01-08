@@ -1,6 +1,6 @@
 import { timer as d3Timer } from 'd3-timer';
 
-export default function Periodic(opts) {
+export default function PeriodicJS(opts) {
 
 	const { duration, displaySelector, callback } = opts;
 	let timer;
