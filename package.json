@@ -2,10 +2,10 @@
   "name": "periodic.js",
   "version": "1.0.0",
   "description": "Small utility to repeat a function every n milliseconds.",
-  "main": "build/index.js",
+  "main": "build.js",
   "scripts": {
-    "clean": "rimraf build",
-    "build": "npm run clean && babel -d build src",
+    "clean": "rimraf build.js",
+    "build": "npm run clean && babel index.js -o build.js",
     "prepublish": "npm run build"
   },
   "repository": {
