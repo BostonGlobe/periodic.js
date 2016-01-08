@@ -7,8 +7,10 @@
 ## Usage
 
 ``` javascript
+import PeriodicJS from 'periodic-js';
+
 const displaySelector = '.periodic';
-const periodic = Periodic({
+const periodic = PeriodicJS({
 	duration: 3000,
 	displaySelector,
 	callback: fetchData
