@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BostonGlobe/periodic.js.git"
+    "url": "git+https://github.com/gabrielflorit/periodic.js.git"
   },
   "keywords": [
     "timer",
@@ -20,9 +20,9 @@
   "author": "Gabriel Florit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BostonGlobe/periodic.js/issues"
+    "url": "https://github.com/gabrielflorit/periodic.js/issues"
   },
-  "homepage": "https://github.com/BostonGlobe/periodic.js#readme",
+  "homepage": "https://github.com/gabrielflorit/periodic.js#readme",
   "devDependencies": {
     "babel-cli": "^6.4.0",
     "babel-preset-es2015": "^6.3.13",
