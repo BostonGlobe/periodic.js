@@ -1,13 +1,13 @@
-# periodic-js
+# periodic.js
 
 ## Install
 
-- `npm install --save periodic-js`
+- `npm install --save periodic.js`
 
 ## Usage
 
 ``` javascript
-import PeriodicJS from 'periodic-js';
+import PeriodicJS from 'periodic.js';
 
 const displaySelector = '.periodic';
 const periodic = PeriodicJS({
