@@ -8,11 +8,11 @@ export default function PeriodicJS(opts) {
 	function displayTimeLeft(time) {
 
 		// find the current displayed time
-		var element = document.querySelector(displaySelector);
-		var currentDisplayedTime = element.innerHTML;
+		let element = document.querySelector(displaySelector);
+		const currentDisplayedTime = element.innerHTML;
 
 		// format incoming time
-		var formattedTime = Math.ceil(time/1000);
+		const formattedTime = Math.ceil(time/1000);
 
 		// don't update dom element with same string
 		if (formattedTime.toString() !== currentDisplayedTime) {
