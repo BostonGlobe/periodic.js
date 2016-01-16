@@ -2,7 +2,7 @@ import { timer as d3Timer } from 'd3-timer';
 
 export default function PeriodicJS(opts) {
 
-	const { duration, displaySelector, callback } = opts;
+	const { duration, displaySelector, callback, runImmediately } = opts;
 	let timer;
 
 	function displayTimeLeft(time) {
@@ -16,7 +16,7 @@ export default function PeriodicJS(opts) {
 
 		// don't update dom element with same string
 		if (formattedTime.toString() !== currentDisplayedTime) {
-			element.innerHTML = 'update in ' + formattedTime;
+			element.innerHTML = 'Update in ' + formattedTime;
 		}
 
 	}
@@ -41,5 +41,10 @@ export default function PeriodicJS(opts) {
 
 	}
 
-	run();
+	if (runImmediately) {
+		callback(run);
+	} else {
+		run();
+	}
+
 }
