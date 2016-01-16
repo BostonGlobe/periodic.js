@@ -1,9 +1,9 @@
-import { timer as d3Timer } from 'd3-timer';
+import { timer } from 'd3-timer';
 
-export default function PeriodicJS(opts) {
+function PeriodicJS(opts) {
 
-	const { duration, displaySelector, callback, runImmediately } = opts;
-	let timer;
+	const { duration, displaySelector, callback } = opts;
+	let timer$$;
 
 	function displayTimeLeft(time) {
 
@@ -16,21 +16,21 @@ export default function PeriodicJS(opts) {
 
 		// don't update dom element with same string
 		if (formattedTime.toString() !== currentDisplayedTime) {
-			element.innerHTML = 'Update in ' + formattedTime;
+			element.innerHTML = 'update in ' + formattedTime;
 		}
 
 	}
 
 	function run() {
 
-		timer = d3Timer((elapsed, time) => {
+		timer$$ = timer((elapsed, time) => {
 
 			// tell user how much time is left
 			displayTimeLeft(duration - elapsed);
 
 			// are we done?
 			if (elapsed > duration) {
-				timer.stop();
+				timer$$.stop();
 
 				// call user-provided callback, and pass along run,
 				// so they can resume the timer, if so desired
@@ -41,10 +41,7 @@ export default function PeriodicJS(opts) {
 
 	}
 
-	if (runImmediately) {
-		callback(run);
-	} else {
-		run();
-	}
-
+	run();
 }
+
+export default PeriodicJS;
