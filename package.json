@@ -1,6 +1,6 @@
 {
   "name": "periodic.js",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Small utility to repeat a function every n milliseconds.",
   "main": "build/index.js",
   "jsnext:main": "build/index.es6.js",
