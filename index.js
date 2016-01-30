@@ -7,18 +7,21 @@ export default function PeriodicJS(opts) {
 
 	function displayTimeLeft(time) {
 
-		// find the current displayed time
-		let element = document.querySelector(displaySelector);
-		const currentDisplayedTime = element.innerHTML;
+		if (displaySelector) {
 
-		// format incoming time
-		const formattedTime = Math.ceil(time/1000);
+			// find the current displayed time
+			let element = document.querySelector(displaySelector);
+			const currentDisplayedTime = element.innerHTML;
 
-		// don't update dom element with same string
-		if (formattedTime.toString() !== currentDisplayedTime) {
-			element.innerHTML = 'Update in ' + formattedTime;
+			// format incoming time
+			const formattedTime = Math.ceil(time/1000);
+
+			// don't update dom element with same string
+			if (formattedTime.toString() !== currentDisplayedTime) {
+				element.innerHTML = 'Update in ' + formattedTime;
+			}
+
 		}
-
 	}
 
 	function run() {
